@@ -144,7 +144,6 @@ var time = url.searchParams.get("time");
 var ttime = url.searchParams.get("ttime");
 var size = url.searchParams.get("size");
 var tsize = url.searchParams.get("tsize");
-var reward = url.searchParams.get("reward");
 
 // console.log("Value is:" + pair[1]);
 
@@ -164,24 +163,22 @@ context2.fillText("[ { ", 6, 20);
 context2.fillText("Block Number:2 ", 13, 40);
 context2.fillText("Block created by : ", 13, 60);
 context2.fillText(creator, 113, 60);
-context2.fillText("Block verification reward : ", 13, 80);
-context2.fillText(reward, 153, 80);
-context2.fillText("Block size : ", 13, 100);
-context2.fillText(size, 83, 100);
-context2.fillText("Timestamp : ", 13, 120);
-context2.fillText(time, 83, 120);
-context2.fillText("Total size : ", 13, 140);
-context2.fillText(tsize, 83, 140);
-context2.fillText("Transactions:  { ", 13, 160);
-context2.fillText("'sender:' ", 23, 180, );
-context2.fillText(sender, 73, 180);
-context2.fillText("'receiver:' ", 23, 200 );
-context2.fillText(receiver, 73, 200);
-context2.fillText("'amount:' ", 23, 220 );
-context2.fillText(amount, 73, 220);
-context2.fillText("'Timestamp:' ", 23, 240 );
-context2.fillText(ttime, 93, 240);
-context2.fillText("} ", 43, 250);
+context2.fillText("Block size : ", 13, 180);
+context2.fillText(size, 83, 80);
+context2.fillText("Timestamp : ", 13, 100);
+context2.fillText(time, 83, 100);
+context2.fillText("Total size : ", 13, 120);
+context2.fillText(tsize, 83, 120);
+context2.fillText("Transactions:  { ", 13, 140);
+context2.fillText("'sender:' ", 23, 160 );
+context2.fillText(sender, 73, 160);
+context2.fillText("'receiver:' ", 23, 180 );
+context2.fillText(receiver, 73, 180);
+context2.fillText("'amount:' ", 23, 200 );
+context2.fillText(amount, 73, 200);
+context2.fillText("'Timestamp:' ", 23, 220 );
+context2.fillText(ttime, 93, 220);
+context2.fillText("} ", 43, 240);
 context2.fillText("} ]", 63, 250);
 
 let canvasTexture2 = new THREE.CanvasTexture( canvas2 );
@@ -220,15 +217,6 @@ const controls = new OrbitControls(camera, renderer.domElement)
 function animate(){
   requestAnimationFrame(animate);
 
-  // cube.rotation.x += 0.001;
-  // cube.rotation.y += 0.005;
-
-  // cube1.rotation.x += 0.005;
-  // cube1.rotation.y += 0.001;
-
-  // cube2.rotation.x += 0.005;
-  // cube2.rotation.y += 0.001;
-  // cube.rotation.z += 0.01;
 
   controls.update()
 
